@@ -1,0 +1,15 @@
+{% extends 'tumo/pages/base.html' %}
+{% load static %}
+
+{% block main %}
+
+{% include 'tumo/pages/section_home.html' %}
+<main id="main">
+
+  {% include 'tumo/pages/section_sobre.html' %}
+  {% include 'tumo/pages/section_processo.html' %}
+  {% include 'tumo/pages/section_portfolio.html' %}
+  {% include 'tumo/pages/section_contatos.html' %}
+
+</main>
+{% endblock main %}
