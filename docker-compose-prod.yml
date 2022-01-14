@@ -3,7 +3,7 @@ version: "3"
 services:
   app:
     build: .
-    command: bash -c 'python manage.py migrate --noinput && python manage.py runserver 0.0.0.0:8000 -v2'
+    command: bash -c 'python manage.py migrate --noinput && python manage.py collectstatic --noinput -c && python manage.py runserver 0.0.0.0:8000 -v2'
     volumes:
       - .:/app
       - ./static:/app/static
