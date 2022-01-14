@@ -1,0 +1,9 @@
+location /static/ {
+    alias /home/ubuntu/tumo/static/;
+    add_header Access-Control-Allow-Origin *;
+}
+
+location /media/ {
+    alias /home/ubuntu/tumo/media/;
+    add_header Access-Control-Allow-Origin *;
+}
