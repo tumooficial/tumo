@@ -20,8 +20,6 @@ djangorestframework
 djangorestframework-simplejwt
 django-filter
 django-storages
-boto3==1.4.4
+boto3==1.26.89
 python-dateutil==2.8.1
 djangorestframework-datatables==0.6.0
-django-storages
-boto3==1.4.4
