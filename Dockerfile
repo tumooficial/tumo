@@ -1,22 +1,13 @@
-FROM python:3.11.2-slim
-
-ENV PYTHONUNBUFFERED 1
-
-RUN apt-get -y update \
-    && apt-get install -y \
-        build-essential \
-        gettext \
-        gcc \
-        python-dev \
-        vim \
-    && apt-get -y clean
+FROM node:20-alpine
 
 WORKDIR /app
 
-COPY requirements.txt /app/requirements.txt
+COPY package*.json ./
 
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN npm install
 
-COPY . /app
+COPY . .
 
-EXPOSE 8000
+EXPOSE 4321
+
+CMD ["npx", "astro", "dev", "--host", "0.0.0.0", "--port", "4321"]

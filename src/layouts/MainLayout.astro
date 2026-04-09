@@ -1,0 +1,52 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Tumo | Sistemas e produtos digitais para seu negócio',
+  description = 'A Tumo desenvolve sistemas sob demanda e estrutura projetos SaaS com visão técnica e de negócio, com foco em crescimento e evolução contínua.'
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="desenvolvimento de sistemas, software sob demanda, desenvolvimento SaaS, produtos digitais, sistemas personalizados, desenvolvimento web, software house, criação de sistemas, soluções SaaS, sistemas para empresas, desenvolvimento de software"
+    />
+
+    <link href="/assets/img/favicon.png" rel="icon" />
+    <link href="/assets/img/favicon.png" rel="apple-touch-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.30.0/dist/tabler-icons.min.css" />
+    <link href="/assets/css/main.css" rel="stylesheet" />
+  </head>
+
+  <body class="index-page">
+    <slot />
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script is:inline src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script is:inline src="/assets/js/aos.js"></script>
+    <script is:inline src="/assets/js/main.js"></script>
+  </body>
+</html>

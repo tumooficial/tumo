@@ -1,34 +1,11 @@
-version: "3"
-  
 services:
-  db:
-    image: postgres:latest
-    env_file:
-      - .env
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    ports:
-      - 5432:5432
-
   app:
+    container_name: tumo-astro
     build: .
-    command: bash -c 'python manage.py migrate --noinput && python manage.py runserver 0.0.0.0:8000 -v2'
+    ports:
+      - "4321:4321"
     volumes:
       - .:/app
-      - ./static:/app/static
-      - ./media:/app/media
-    ports:
-      - "8000:8000"
-    depends_on:
-      - db
-    env_file:
-      - .env
-
-  mailhog:
-    container_name: mailhog
-    image: mailhog/mailhog
-    ports:
-      - 8025:8025
-
-volumes:
-  pgdata:
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
