@@ -6419,6 +6419,19 @@ section,
   }
 }
 
+.input-group-custom .invalid {
+  border-color: #ea5455 !important;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+  background-color: var(--accent-color) !important;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):hover {
+  color: var(--contrast-color) !important;
+  background: color-mix(in srgb, var(--accent-color), transparent 15%) !important;
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/

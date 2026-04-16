@@ -9,6 +9,9 @@
     "preview": "astro preview --host"
   },
   "dependencies": {
-    "astro": "^5.0.0"
+    "astro": "^6.0.0",
+    "@astrojs/vercel": "^10.0.4",
+    "sweetalert2": "^11.10.0",
+    "resend": "^4.x.x"
   }
 }
