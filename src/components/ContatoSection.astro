@@ -38,45 +38,49 @@
             </div>
           </div>
 
-          <form class="php-email-form" onsubmit="event.preventDefault(); alert('Formulário ainda não integrado. No próximo passo, posso conectar isso ao Resend.');">
+          <form class="php-email-form" id="form_contato" novalidate>
             <div class="row g-4">
               <div class="col-md-6">
                 <div class="input-group-custom">
                   <label for="nome">Nome</label>
-                  <div class="input-wrapper">
+                  <div class="input-wrapper mb-1">
                     <i class="ti ti-user"></i>
                     <input type="text" name="nome" id="nome" placeholder="Digite o nome" />
                   </div>
+                  <p class="mb-0 text-danger d-none" id="msg_erro_nome"></p>
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="input-group-custom">
                   <label for="email">Email</label>
-                  <div class="input-wrapper">
+                  <div class="input-wrapper mb-1">
                     <i class="ti ti-mail"></i>
                     <input type="email" name="email" id="email" placeholder="Digite o email" />
                   </div>
+                  <p class="mb-0 text-danger d-none" id="msg_erro_email"></p>
                 </div>
               </div>
 
               <div class="col-12">
                 <div class="input-group-custom">
                   <label for="assunto">Assunto</label>
-                  <div class="input-wrapper">
+                  <div class="input-wrapper mb-1">
                     <i class="ti ti-message"></i>
                     <input type="text" name="assunto" id="assunto" placeholder="Digite o assunto" />
                   </div>
+                  <p class="mb-0 text-danger d-none" id="msg_erro_assunto"></p>
                 </div>
               </div>
 
               <div class="col-12">
                 <div class="input-group-custom">
                   <label for="mensagem">Mensagem</label>
-                  <div class="input-wrapper textarea-wrapper">
+                  <div class="input-wrapper textarea-wrapper mb-1">
                     <i class="ti ti-message-circle"></i>
                     <textarea name="mensagem" id="mensagem" rows="5" placeholder="Nos conte sobre o seu projeto..."></textarea>
                   </div>
+                  <p class="mb-0 text-danger d-none" id="msg_erro_mensagem"></p>
                 </div>
               </div>
             </div>
@@ -93,3 +97,7 @@
     </div>
   </div>
 </section>
+
+<script>
+  import '../scripts/formContato.js';
+</script>
