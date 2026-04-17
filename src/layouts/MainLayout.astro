@@ -41,12 +41,15 @@ const {
   <body class="index-page">
     <slot />
 
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="ti ti-circle-arrow-up-filled"></i
-    ></a>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+      <i class="ti ti-circle-arrow-up-filled"></i>
+    </a>
 
     <script is:inline src="/assets/js/bootstrap.bundle.min.js"></script>
     <script is:inline src="/assets/js/aos.js"></script>
-    <script is:inline src="/assets/js/main.js"></script>
+    <script is:inline src="/assets/js/main_theme.js"></script>
   </body>
+  <script>
+    import '../scripts/formAlertas.js'
+  </script>
 </html>
